@@ -17,24 +17,6 @@ on:
       - edited
       - synchronize
 jobs:
-  lint-commit-message:
-    name: Metadata
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-    steps:
-        - uses: actions/checkout@v2
-          with:
-            fetch-depth: 0
-
-        - name: Commit Message
-          run: .github/lint-commit-message.sh
-
-        - name: File names
-          run: .github/lint-filename.sh
-
-        - name: Functions
-          run: .github/lint-disallowed-functions-in-library.sh
 
   lint-go:
     name: Go

@@ -14,9 +14,11 @@ on:
   pull_request:
     branches:
       - master
+      - unity
   push:
     branches:
       - master
+      - unity
 
 jobs:
   Check:
